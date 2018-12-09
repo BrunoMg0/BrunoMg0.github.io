@@ -1,5 +1,4 @@
-<!DOCTYPE php>
-<html lan="en">
+<html>
     
     <?php
     $titulo = 'Eletroluz';
