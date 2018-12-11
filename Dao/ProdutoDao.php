@@ -16,11 +16,6 @@ class ProdutoDao {
         } catch (Exception $exc) {
             print 'Erro no banco de dados: ' . $exc;
         }
-
-
-//       if($p_sql->execute())
-//           return true;
-//       return false;
     }
     
     public function listarProdutos($categoria){
