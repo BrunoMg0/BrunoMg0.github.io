@@ -1,5 +1,4 @@
 <?php
-//require_once '../Util/Conexao.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . "/Util/Conexao.php";
 
 class ContatoDao {
