@@ -10,14 +10,15 @@
         <?php
         include "headersl.html"
         ?>
-        
+
         <?php
         if (!empty($_REQUEST['erro'])) {
             ?>
-                <?php echo 
-                '<script>alert(" '.($_REQUEST['erro']).'  ");</script>';
-                ?>
-           
+            <?php
+            echo
+            '<script>alert(" ' . ($_REQUEST['erro']) . '  ");</script>';
+            ?>
+
             <?php
         }
         ?>
@@ -32,22 +33,36 @@
 
                     </h3>
 
-                   
 
 
-                    <form class="group" action= "/Controller/ProdutoController.php?acao=salvarProduto" method="POST">
+
+                    <form class="group" action= "/Controller/ProdutoController.php?acao=salvarProduto" method="POST" enctype="multipart/form-data">
                         <label for="nomeprod">Nome do Produto </label>
                         <input class="form-control" type="text" name="nomeprod" maxlength="250" >
-
-                        <label for="caminhoimg">Caminho da imagem  </label>
-                        <input class="form-control" type="text" name="caminhoimg" maxlength="250" >
+                       
+                      
 
                         <label for="legendaprod">Legenda  </label>
                         <input class="form-control" type="text" name="legendaprod" maxlength="250" >
                         <br>
-
                         <label for="categoria">Categoria do produto  </label>
-                        <input class="form-control" type="text" name="categoria" maxlength="20">
+                        
+                        <select name="categoria" class="form-control" type="text" >      
+                            <option value="arandela">arandela</option>
+                            <option value="contator">contator</option>
+                            <option value="disjuntor">disjuntor</option>
+                            <option value="duchaChuv">duchaChuv</option>
+                            <option value="lampada">lampada</option>
+                            <option value="lustre">lustre</option>
+                            <option value="painel">painel</option>
+                            <option value="pendente">pendente</option>
+                            <option value="tomada">tomada</option>
+                        </select>
+
+
+                        <label for="Imagem"> Imagem  </label>
+                        <input type="file" name="img" >
+                        
 
 
                         <br>
@@ -64,10 +79,10 @@
 
             </div>
         </div>
-    
+
         <br><br><br>
-        
-        
+
+
         <?php
         include "footersl.html"
         ?>
